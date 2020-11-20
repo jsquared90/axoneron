@@ -338,7 +338,7 @@ General Content
 input[type="submit"],
 input[type="button"]
 {
-  background-color: #23799d;
+  background-color: #00918e;
   color: #FFF;
   margin: 1em auto;
   padding: 1em;
@@ -860,7 +860,7 @@ input[type="button"]
 
 .buttonBar1DIV .selected
 {
-    border-bottom: #4d7f33 solid 6px;
+    border-bottom: #00918e solid 6px;
     font-weight: bold;
 }
 
@@ -1010,7 +1010,7 @@ Header Bar
     width: 100%;
     height: 100%;
     display:inline-flex;
-    color: #FFFFFF;
+    color: #ffdc34;
 }
 
 #headerBarInnerDIV div
@@ -1048,7 +1048,7 @@ Header Bar
     text-align: right;
     width: 100%;
     font-size: 0.6em;
-    color: #FFFFFF;
+    color: #12013f;
     margin: auto 1em;
 }
 
@@ -1141,7 +1141,7 @@ BG
 #successDIV .BG,
 #errorDIV .BG
 {
-    background: url("assets/images/Axoneron-App-BG-01.png");
+    background-color: #12013f;
 }
 
 #userContainerDIV .BG,
@@ -1152,7 +1152,7 @@ BG
 #hotelAdminContainerDIV .BG,
 #reservationContainerDIV .BG
 {
-	background: url("assets/images/Axoneron-App-BG-02.png");
+    background-color: #12013f;
 }
 
 #adminContainerDIV .BG,
@@ -1164,7 +1164,7 @@ BG
 #messagesContainerDIV .BG,
 #supportContainerDIV .BG
 {
-	background: url("assets/images/Axoneron-App-BG-03.png");
+    background-color: #12013f;
 }
 
 /***************************
@@ -1301,47 +1301,47 @@ Home Page
 
 .itemCongress::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Congress.jpg");
+    background-color: #12013f;
 }
 
 .itemReservations::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Reservation.jpg");
+    background-color: #12013f;
 }
 
 .itemSchedule::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Schedule.jpg");
+    background-color: #12013f;
 }
 
 .itemBookAFlight::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-BookFlight.jpg");
+    background-color: #12013f;
 }
 
 .itemMessages::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Messages.jpg");
+    background-color: #12013f;
 }
 
 .itemAccount::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Account.jpg");
+    background-color: #12013f;
 }
 
 .itemSupport::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Support.jpg");
+    background-color: #12013f;
 }
 
 .itemAdmin::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Admin.jpg");
+    background-color: #12013f;
 }
 
 .itemSignout::before
 {
-    background-image: url("assets/images/Axoneron-App-Home-Screen-Signout.jpg");
+    background-color: #12013f;
 }
 
 .homeMenuItemDIV div
@@ -2118,7 +2118,7 @@ Agenda Display
     position: fixed;
     width: 100%;
     height: 2.5em;
-    background-color: #23799d;
+    background-color: #ffdc34;
 /*    user-select: none;*/
 /*    pointer-events: none;*/
 }
