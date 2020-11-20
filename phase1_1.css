@@ -1,0 +1,1132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 14, 2020, 3:07:42 PM
+    Author     : jsquared90
+*/
+
+/*--------------------------------------------------------------
+>>> Axoneron Color Chart:
+----------------------------------------------------------------
+Axoneron Dark Green:          #4d7f33;
+Axoneron Light Blue:          #79cbf7;
+Axoneron Light Green:         #8cc63f;
+Axoneron Dark Blue:           #23799d;
+*/
+
+form div
+{
+    padding: 0.3em 0;
+}
+
+input
+{
+    -webkit-appearance: none;
+}
+
+html
+{
+    color:#000;
+}
+
+input,
+textarea
+{
+    font-size: 1em;
+    padding: 0.3em;
+    border: solid 0.1em #ccc;
+    background-color: #fafafa;
+    width: 14em;
+}
+
+textarea
+{
+    height: 5em;
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0.5em 1em 0;
+    vertical-align: bottom;
+}
+
+input::placeholder,
+textarea::placeholder
+{
+    color: #999;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.datepicker
+{
+    width: 6em;
+}
+
+.state,
+.zip
+{
+    width: 8em;
+}
+
+input:checked
+{
+  background-color: #23799d;
+}
+
+input:focus
+{
+  outline-color: transparent;
+  outline-style: none;
+}
+
+input[type="email"],
+input[type="password"]
+{
+    width: 14em;
+}
+
+input[type="submit"]
+{
+    cursor: pointer;
+}
+
+input[type="time"]
+{
+    font-size: 1em;
+    padding: 0.5em 0 0.5em 1.2em;
+    width:8em;
+    height: 1.1em;
+    text-align: center;
+}
+
+input[type="number"]
+{
+    text-align: center;
+    width: 2em;
+    margin: 0.5em 1em;
+    height: 1em;
+}
+
+select
+{
+    font-size: 1em;
+    padding: 0.5em 2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align-last:center;
+    -webkit-border-radius: 0px; 
+}
+
+option
+{
+    text-align: center;
+}
+
+p
+{
+    font-weight: bold;
+}
+
+a,
+a:hover,
+a:visited
+{
+    text-decoration: none;
+}
+
+a,
+a:visited
+{
+    color: #000;
+}
+
+.button a,
+.button a:visited
+{
+    color: #FFF;
+}
+
+a:hover
+{
+    color: #23799d;
+}
+
+.button a:hover
+{
+    color: #FFF;
+}
+
+body
+{
+    margin: auto auto 5em;
+    max-width: 32em;
+}
+
+div
+{
+    
+}
+
+/***************************
+Header Bar
+***************************/
+
+#headerBarDIV
+{
+    width: 100%;
+    height: 1.6em;
+}
+
+#headerBarInnerDIV
+{
+    width: 100%;
+    height: 100%;
+    display:inline-flex;
+    color: #FFFFFF;
+}
+
+#headerBarInnerDIV div
+{
+    
+}
+
+#headerBarTitleDIV
+{
+    margin: auto 1em;
+    font-weight: bold;
+}
+
+#headerBarTitleDIV img
+{
+    width: 1em;
+    height: 1em;
+}
+
+#exitDIV
+{
+    margin: auto 0.5em;
+}
+
+#exitDIV a
+{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#loggedInAsDIV
+{
+    text-align: right;
+    width: 100%;
+    font-size: 0.4em;
+    color: #FFFFFF;
+    margin: auto 1em;
+}
+
+.basicUserDIV
+{
+    background-color: #79cbf7;
+}
+
+.adminColorDIV
+{
+    background-color: #4d7f33;
+}
+
+/***************************
+General Content
+***************************/
+
+.contentDIV,
+.reservationDetailDIV,
+form
+{
+    margin: 0 2em;
+}
+
+.separater
+{
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #8cc63f;
+}
+
+.pageTitleDIV
+{
+    padding: 1.5em 0 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button,
+input[type="submit"]
+{
+  background-color: #23799d;
+  font-size: 1.1em;
+  color: #FFF;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button:disabled
+{
+  background-color: #dedede;
+  border: solid 0.1em #ababab;
+}
+
+.buttonListDIV
+{
+    width: 70%;
+    max-width: 14em;
+    margin: auto;
+}
+
+.clickable
+{
+  cursor: pointer;
+}
+
+.buttonListDIV div
+{
+    display: block;
+}
+
+.emptyListDIV
+{
+    padding: 2em 0 !important;
+}
+
+.textarea
+{
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 0.5em 0 2em;
+    padding: 0.5em 1em !important;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+}
+
+#successDIV3
+{
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.genericLabel
+{
+    font-weight: normal;
+    text-transform:none;
+}
+
+.editDIV1,
+.editDIV2
+{
+    font-size: 0.9em;
+    float: right;
+}
+
+.editDIV1
+{
+    margin: -1em 0;
+}
+
+.editDIV2
+{
+    margin: 0.3em 0;
+}
+
+.editDIV1 a,
+.editDIV2 a
+{
+    color: #FFF;
+}
+
+.removalForm
+{
+    margin: -0.3em 0;
+    font-size: 0.9em;
+    float: left;
+}
+
+.removalForm input
+{
+  background:none;
+  border: none;
+  font-size: 0.9em;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.extraTopMargin
+{
+    margin-top: 1.5em;
+}
+
+.footnote1
+{
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.hRow
+{
+    display: inline-block;
+}
+
+.hRow div
+{
+    display: inline-block;
+    margin: 0 0.5em;
+    float: left;
+}
+
+.width1
+{
+    width: 2em;
+}
+
+.oddLine
+{
+    background-color: #dedede;
+}
+
+.evenLine
+{
+    background-color: #eaffcc;
+}
+
+.italic
+{
+    font-style: italic !important;
+}
+
+.normal
+{
+    font-weight: normal !important;
+}
+
+.sentenceCasing
+{
+    text-transform: none !important;
+}
+
+.instructionsDIV
+{
+    padding: 1em 0 !important;
+    font-size: 0.9em;
+}
+
+.smallTitle
+{
+    font-size: 0.8em;
+    margin: 0.3em 0 0;
+}
+
+.recordTimeStamp
+{
+    margin: -5em 0;
+    float: right;
+    font-size: 0.7em;
+    font-style:italic;
+}
+
+.sortFiltersDIV
+{
+    margin: 1.5em 0 1em;
+}
+
+.sortFiltersDIV form
+{
+    margin: 0;
+}
+
+.sortFiltersDIV .button
+{
+    font-size: 0.6em;
+    margin: -6.5em 0;
+    float: right;
+}
+
+.sortFiltersDIV div
+{
+    font-size: 0.9em;
+}
+
+.sortFilterItemDIV
+{
+    display:inline-block;
+    padding: 0.5em 2em 0 0;
+}
+
+.sortFilterItemDIV input
+{
+    margin: 0.5em 0.5em 0 0.7em;
+}
+
+.caret,
+.trash,
+.edit
+{
+    cursor: pointer;
+    display:inline-block;
+    height: 0;
+    font-family: "FontAwesome";
+}
+
+.caret
+{
+    margin: -1em 0;
+}
+
+.trash,
+.edit
+{
+    float: right;
+    font-size: 1.2rem !important;
+}
+
+.edit
+{
+    margin: 2em -1em 0 0;
+}
+
+.reservationDetailDIV .caret,
+.reservationDetailDIV .trash,
+.reservationDetailDIV .edit
+{
+    color: #999;
+}
+
+.titleStyle1
+{
+    margin: 0.3em 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titleStyle2
+{
+    font-weight: bold;
+}
+
+.commentsDisplayDIV
+{
+    width: 30em;
+}
+
+.marginStyle1
+{
+    margin: 0.3em 0;
+}
+
+.copyStyle1,
+.copyStyle2
+{
+    font-size: 0.9em;
+    font-style:italic;
+    color: #555;
+}
+
+.copyStyle1
+{
+    text-align: center;
+    padding: 0 0 1em;
+}
+
+/***************************
+BG
+***************************/
+
+.BG
+{
+    width: 100%;
+    height: 100%;
+	top: 0;
+    position: fixed;
+    z-index: -10000;
+    background-repeat: no-repeat !important;	
+}
+
+@media (min-aspect-ratio: 900/1601) and (max-aspect-ratio: 1601/900)
+{
+    .BG
+    {
+        left: 0;
+        background-position: 50% !important;
+    }
+}
+
+@media (min-aspect-ratio: 900/1601) and (max-aspect-ratio: 1/1)
+{
+    .BG
+    {
+        background-size: calc(100vh) !important;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 1601/900)
+{
+    .BG
+    {
+        background-size: calc(100vw) !important;
+    }
+}
+
+@media (min-aspect-ratio: 1602/900)
+{
+	.BG
+	{
+		max-width: calc(177vh);
+		background-size: calc(100vw) !important;
+		left: calc(calc(56.25vw) - calc(100vh));
+		background-position: 50% !important;		
+	}
+}
+
+@media (max-aspect-ratio: 900/1602)
+{
+	.BG
+	{
+		max-height: calc(177vw);
+		background-size: calc(100vh) !important;
+		left: 0;
+		background-position: 50% !important;
+	}
+}
+
+/*
+Notes for Chris:
+
+1. Currently I just mapped the same image file to BG container DIV background for ALL pages.
+You will need to separate and define these as necessary.
+
+2. The @media queries (above) only apply for aspect ratios between 9:16 and 16:9.
+You will still need to build the position and size code for anything outside that range
+
+*/
+
+#congressAdminContainerDIV .BG
+{
+    background: url("assets/images/Axoneron-App-BG-01.png");
+}
+
+#loginContainerDIV .BG,
+#homeContainerDIV .BG
+{
+    background: url("assets/images/Axoneron-App-BG-01.png");
+}
+
+#userContainerDIV .BG,
+#userAdminContainerDIV .BG,
+#congressContainerDIV .BG,
+#hospitalityContainerDIV .BG,
+#hotelContainerDIV .BG,
+#hotelAdminContainerDIV .BG,
+#reservationContainerDIV .BG
+{
+	background: url("assets/images/Axoneron-App-BG-02.png");
+}
+
+#adminContainerDIV .BG,
+#hospitalityAdminContainerDIV .BG
+{
+	background: url("assets/images/Axoneron-App-BG-03.png");
+}
+
+/*#blank .BG{
+	background: url("assets/images/Axoneron-App-BG-04.png");
+}*/
+
+
+
+/***************************
+Home Page
+***************************/
+
+#homeHeaderDIV
+{
+    text-align: center;
+    width: 100%;
+    margin: 0.5em 0 0;
+}
+
+#homeImage
+{
+    height: 7em;
+}
+
+.homeMenuItemDIV
+{
+    
+}
+
+.homeMenuItemDIV div
+{
+    padding: 1.3em 1em;
+}
+
+.homeMenuItemDIV a
+{
+    font-weight: bold;
+}
+
+/*
+.homeMenuItemDIV:after
+{
+    content: " ";
+    display: block;
+    height: 0.1em;
+    width: 100%;
+    background-color: #8cc63f;
+}
+*/
+
+/***************************
+Congress Content Display
+***************************/
+
+#viewCongressDIV
+{
+    
+}
+
+.shortCongressBlockDIV,
+.longCongressBlockDIV,
+.shortHospRoomBlockDIV,
+.longHospBookBlockDIV
+{
+    padding: 0.8em 0;
+}
+
+.longHospBookBlockDIV div
+{
+    margin: 0.3em 0;
+}
+
+.longReservationDIV,
+.shortReservationDIV
+{
+    background-color: rgba(255,255,255,0.6);
+    border: #8cc63f solid 0.2em;
+}
+
+.longReservationDIV
+{
+    padding: 1em 1em !important;
+}
+
+.shortReservationDIV
+{
+    margin: 0.4em 0;
+    padding: 0.6em 1em !important;
+}
+
+.shortAgendaItemBlockDIV
+{
+    padding: 0.6em 0;
+}
+
+.longCongressBlockDIV,
+.hotelBlockDIV,
+.hospRoomBlockDIV
+{
+    color: #FFF !important;
+    margin: 1em 0;
+}
+
+.longCongressBlockDIV
+{
+    background-color: #79cbf7;
+    padding: 1em 1em;
+}
+
+.hotelBlockDIV,
+.hospRoomBlockDIV
+{
+    background-color: #4d7f33;
+    padding: 1em 1em 2em;
+}
+
+.longCongressBlockDIV div,
+.reservationDetailDIV div
+{
+    padding: 0.1em 0;
+}
+
+.longCongressBlockDIV div,
+.hotelBlockDIV div,
+.hospRoomBlockDIV div,
+.shortAgendaItemBlockDIV div
+{
+    text-align: center;
+}
+
+.shortCongressShortName,
+.longCongressShortName,
+.shortHospRoomName,
+.longHospBookName
+{
+    font-weight: bold;
+}
+
+.longHospBookName
+{
+    font-size: 1.2em;
+    padding: 0 0 0.5em;
+}
+
+.longCongressShortName
+{
+    font-size: 1.6em;
+}
+
+.longCongressVenue
+{
+    padding: 1em 0 0 !important;
+}
+
+.longCongressVenue,
+.reservationTitleDIV
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.reservationTitleDIV
+{
+    padding: 1em 0 !important;
+}
+
+.longCongressVenueDetail
+{
+    font-size: 0.8em;
+}
+
+.longHospRoomDetail
+{
+    margin: 0.8em 0 0;
+}
+
+.shortCongressShortDates,
+.shortCongressHotel,
+.shortHospRoomLocation,
+.shortHospRoomSize,
+.shortHospBookName,
+.longHospLocation,
+.longHospSize,
+.longHospRoomName
+{
+    font-size: 0.8em;
+}
+
+.longHospBookDateTime
+{
+    font-size: 0.8em;
+    padding: 0 0 0.5em;
+}
+
+.longHospBookOpenEnd
+{
+    font-size: 0.9em;
+    padding: 0.5em 0 !important;
+    margin: 0 0 0.7em !important;
+}
+
+.shortCongressHotel
+{
+    margin: 0;
+}
+
+.shortCongressShortName,
+.shortCongressShortDates,
+.shortCongressHotel,
+.shortHospRoomLocation,
+.shortHospRoomSize,
+.longHospLocation,
+.longHospSize,
+.longHospOpenEnd
+{
+    padding: 0.1em 0;
+}
+
+.shortHospRoomSpan
+{
+    padding: 0.5em 0 0;
+}
+
+.shortAgendaItemLine1
+{
+    font-weight: bold;
+}
+
+.shortAgendaItemLine2
+{
+    font-size: 0.8em;
+}
+
+.shortAgendaItemLine3
+{
+    margin: 0.5em 0 0;
+}
+
+#reservationsListDIV,
+#congressListDIV
+{
+    padding: 0.5em 1em;
+}
+
+.reservationItemDIV
+{
+    padding: 0 0.2em 1.5em;
+}
+
+.hotelInfoDIV
+{
+    padding: 0.5em 2em 1em !important;
+}
+
+.requestItemDIV
+{
+    padding: 1.3em 0.2em 0;
+}
+
+.requestorInfoDIV
+{
+    text-transform: uppercase;
+    margin: 0 0 -0.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.requestTypeDIV
+{
+    margin: -5.5em 0;
+    float: right;
+    font-size: 0.9em;
+    font-style:italic;
+}
+
+.availabilityDIV
+{
+    background-color: #eaffcc;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 20em;
+}
+
+.availabilityRemove
+{
+    float:right;
+    margin: -2em 0;
+}
+
+.hospRoomAvailListDIV div
+{
+    margin: 0.5em 0;
+}
+
+.hospRoomSegmentDIV
+{
+    width: 3.9em;
+    height: 3.9em;
+    margin: 0 -1px;
+    display: inline-table;
+}
+
+.hospRoomSegmentDIV div
+{
+    display: block;
+    position: relative;
+}
+
+.hospRoomSegmentDate
+{
+    margin: auto;
+}
+
+.hospRoomSegmentStart
+{
+    width: 100%;
+    text-align: center;
+    top: 1.3em;
+}
+
+.hospRoomSegmentEnd
+{
+    width: 100%;
+    text-align: center;
+    top: 2em;
+    font-size: 0.8em;
+}
+
+.hospRoomSegmentDuration
+{
+    top: 2em;
+    left: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.hospRoomSegmentAuthor
+{
+    width: 100%;
+    text-align: center;
+    top: 3.2em;
+    font-size: 0.5em;
+}
+
+.scheduleDIV
+{
+    margin: auto;
+    text-align: center;
+}
+
+.segmentAvailable
+{
+    background-color: #fafafa;
+    cursor: pointer !important;
+    outline: #bbb thin solid;
+}
+
+.segmentUnavailable
+{
+    background-color: #bbb;
+    cursor:default !important;
+    color: #FFF;
+    outline: #000 thin solid;
+}
+
+.scheduleHeaderDIV
+{
+    background-color: #eaffcc;
+    padding: 0.7em;
+    margin: 0.2em 0;
+}
+
+.emptySegment
+{
+    text-align: center;
+    cursor:default !important;
+}
+
+.emptySegment div
+{
+    width: 100%;
+    text-align: center;
+    top: 1.4em;
+    font-size: 0.8em;
+}
+
+.segmentSelected
+{
+    background-color: #eaffcc;
+    outline: #48ea48 thin solid;
+}
+
+#bookHospFormDIV
+{
+    text-align: center;
+    margin: 2em 0;
+}
+
+#bookHospRoomSubmit
+{
+    margin: 0 0 1em;
+}
+
+/***************************
+Calendar Displays
+***************************/
+
+
+.hospCalendarDIV
+{
+    text-align: left;
+}
+
+.calendarDIV1
+{
+    margin: 0.5em 0 1.5em;
+}
+
+.calendarDIV2
+{
+    margin: 0 2em;
+}
+
+.calendarDIV1,
+.calendarDIV1 div
+{
+    display: inline-block;
+}
+
+.dateBlock
+{
+    border: #000 1px solid;
+    width: 4em;
+    height: 4em;
+    margin: 0 -2.5px;
+    cursor:pointer;   
+}
+
+.dateBlock.selected
+{
+    background-color: #000;
+    color: #FFF;
+    cursor:default;
+}
+
+.dateBlock.disabled
+{
+    color: #999;
+    cursor: default;
+}
+
+.dateBlockInnerDIV
+{
+    top:0.2em;
+    position: relative;
+}
+
+.dateBlockMonth
+{
+    text-transform: uppercase;
+}
+
+.dateBlockDate
+{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.dateBlockInnerDIV,
+.dateBlockInnerDIV div
+{
+    display: block !important;
+}
+
+.leftArrow,
+.rightArrow
+{
+    font-size: 2em;
+    font-weight: bold;
+    cursor:pointer;
+    position: relative;
+    top: -0.2em;
+}

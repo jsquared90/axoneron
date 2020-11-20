@@ -1,0 +1,4068 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 14, 2020, 3:07:42 PM
+    Author     : jsquared90
+*/
+
+/*--------------------------------------------------------------
+>>> Axoneron Color Chart:
+----------------------------------------------------------------
+Axoneron Dark Green:          #4d7f33;
+Axoneron Light Blue:          #79cbf7;
+Axoneron Light Green:         #8cc63f;
+Axoneron Dark Blue:           #23799d;
+*/
+
+form
+{
+    text-align: left;
+    margin: 0 auto;
+}
+
+form div
+{
+    padding: 0.3em 0;
+}
+
+input
+{
+    -webkit-appearance: none;
+}
+
+
+html
+{
+    color:#000;
+}
+
+@font-face{
+	font-family:"NewsGothicStd";
+	src: url("assets/fonts/NewsGothicStd.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+	
+@font-face{
+	font-family:"NewsGothicStd";
+	src: url("assets/fonts/NewsGothicStd-Bold.otf");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family:"NewsGothicStd";
+	src: url("assets/fonts/NewsGothicStd-BoldOblique.otf");
+	font-weight: bold;
+	font-style: oblique;
+}
+
+input,
+textarea,
+select
+{
+    font-family: NewsGothicStd;
+    font-size: 1em;
+    padding: 0.5em 0.3em;
+    border: none;
+    background-color: rgba(230,230,230,0.5);
+}
+
+textarea
+{
+    height: 5em;
+    border: none;
+    border-style:none;
+    outline-color: #FFF;
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0.5em 1em 0;
+    vertical-align: bottom;
+    border: #23799d solid thin;
+}
+
+input[type="file"]
+{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+input[type="file"] + label
+{
+    display: inline-block;
+}
+
+
+input::placeholder,
+textarea::placeholder
+{
+    color: #999;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.formLabel 
+{
+    font-size: 0.7em;
+    margin: 0.4em 0 -0.45em 0;
+    text-transform: uppercase;
+}
+
+input:checked
+{
+  background-color: #23799d;
+}
+
+input:focus,
+textarea:focus
+{
+  outline-color: transparent;
+  outline-style: none;
+}
+
+input[type="submit"],
+label
+{
+    cursor: pointer;
+}
+
+/*
+input[type="time"]
+{
+    font-size: 1em;
+    padding: 0.5em 0 0.5em 1.2em;
+    width:8em;
+    text-align: center;
+}
+
+input[type="number"]
+{
+    text-align: center;
+    width: 2em;
+    margin: 0.5em 1em;
+}
+*/
+
+select
+{
+    margin: 0 0.3em;
+    font-size: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align-last:left;
+    -webkit-border-radius: 0px;
+    border: none;
+    text-transform: uppercase;
+    border-style:none;
+    outline-color: #FFF;
+    cursor: pointer;
+}
+
+/*select:focus {
+    outline-color: #23799d;
+}*/
+
+input[type='date']
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 0.5em 1em 0.2em;
+    margin: 0 0.3em;
+}
+
+
+form select:focus
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+.selectDIV::after,
+.dateSelectDIV::after
+{
+    position: relative;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #23799d;
+    float: right;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.selectDIV::after
+{
+    content: '\f150';
+    font-size: 2.4em;
+}
+
+@-moz-document url-prefix() {
+        .selectDIV::after
+            {
+                font-size: 2.6em;
+            }
+    }
+
+.dateSelectDIV::after
+{
+    content: '\f073';
+    font-size: 1.5em;
+}
+
+.datepicker 
+{
+    cursor: pointer;
+}
+
+option
+{
+    text-align: center;
+}
+
+p
+{
+    font-weight: bold;
+}
+
+a,
+a:hover,
+a:visited
+{
+    text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover
+{
+    color: #000;
+}
+
+.button a,
+.button a:visited,
+.button a:hover,
+.homeMenuItemDIV a,
+.homeMenuItemDIV a:visited,
+.homeMenuItemDIV a:hover,
+.shortCongressBlockDIV a,
+.shortCongressBlockDIV a:visited,
+.shortCongressBlockDIV a:hover
+{
+    color: #FFF;
+}
+
+h1, h2, h3
+{
+    font-family: "NewsGothicStd-Bold";
+    letter-spacing: -0.03em;
+}
+
+
+body
+{
+    margin: auto auto 5em;
+    font-family:"NewsGothicStd";
+    letter-spacing: -0.03em;
+}
+
+/***************************
+General Content
+***************************/
+
+.reservationDetailDIV
+{
+    margin: 0 2em;
+}
+
+.separator
+{
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #8cc63f;
+}
+
+#homeContainerDIV .separator
+{
+	display: none;
+}
+
+.pageTitleDIV,
+.subTitleDIV
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pageTitleDIV
+{
+    font-size: 1.2em;
+    padding: 0.8em 1em 0.6em;
+    margin: 0;
+}
+
+#congressAdminContainerDIV .pageTitleDIV,
+#userAdminContainerDIV .pageTitleDIV,
+#registrationContainerDIV .pageTitleDIV
+{
+    margin: 1.2em auto 0.2em;
+    padding: 0;
+}
+
+.subTitleDIV
+{
+    font-size: 0.9em;
+    margin: 1em 0 0;
+}
+
+.whiteBG
+{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.button,
+input[type="submit"],
+input[type="button"]
+{
+  background-color: #23799d;
+  color: #FFF;
+  margin: 1em auto;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button:disabled
+{
+  background-color: #dedede;
+  border: solid 0.1em #ababab;
+}
+
+.buttonListDIV
+{
+    width: 70%;
+    max-width: 14em;
+    margin: auto !important;
+}
+
+.buttonListDIV .pageTitleDIV
+{
+    padding: 1.4em 0 0;
+    text-align: center;
+}
+
+.clickable
+{
+  cursor: pointer;
+}
+
+.buttonListDIV div
+{
+    display: block;
+}
+
+.emptyListDIV
+{
+    padding: 2em 2em !important;
+    line-height: 1.5em;
+    text-align: center;
+    color: #555;
+    font-size: 0.8em;
+}
+
+.textarea
+{
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 0.5em 0 2em;
+    padding: 0.5em 1em !important;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+}
+
+#successDIV3,
+#errorDIV3
+{
+    display: table;
+    text-align: center;
+}
+
+#successDIV3
+{
+    margin: auto;
+    color: #FFF;
+}
+
+#errorDIV3
+{
+    margin: 3em auto;
+}
+
+#successDIV3 p,
+#errorDIV3 p
+{
+    font-size: 1.7em;
+    margin: 3em auto 1.5em;
+    font-weight: normal;
+}
+
+#successDIV .button,
+#errorDIV .button
+{
+    width: 6em;
+    padding: 1.5em 0;
+}
+
+.genericLabel
+{
+    font-weight: normal;
+    text-transform:none;
+}
+
+.editDIV1,
+.editDIV2
+{
+    font-size: 0.9em;
+    float: right;
+}
+
+.editDIV1
+{
+    margin: -1em 0;
+}
+
+.editDIV2
+{
+    margin: 0.3em 0;
+}
+
+.editDIV1 a,
+.editDIV2 a
+{
+    color: #FFF;
+}
+
+.removalForm,
+.editForm
+{
+    margin: -0.5em 0;
+    font-size: 0.9em;
+    float: right;
+    width: 0;
+    height: 0;
+}
+
+.removalForm input,
+.editForm input,
+.itemAddForm input
+{
+  background:none;
+  border: none;
+  font-size: 0.9em;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.extraTopMargin
+{
+    margin-top: 1.5em;
+}
+
+.footnote1
+{
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.hRow
+{
+    display: inline-block;
+}
+
+.hRow div
+{
+    display: inline-block;
+    margin: 0 0.5em;
+    float: left;
+}
+
+.width1
+{
+    width: 2em;
+}
+
+.width2
+{
+    width: 8em;
+}
+
+.agendaExtendedDetail .width2 {
+    width: 8em !important;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.oddLine
+{
+    background-color: rgba(140,198,63,0.4);
+}
+
+.evenLine
+{
+    background-color: rgba(35,121,157,0.4);
+}
+
+.italic
+{
+    font-style: italic !important;
+}
+
+.normal
+{
+    font-weight: normal !important;
+}
+
+.bold
+{
+    font-weight: bold !important;
+}
+
+.centered
+{
+    text-align: center !important;
+}
+
+.sentenceCasing
+{
+    text-transform: none !important;
+}
+
+.instructionsDIV
+{
+    padding: 2em 1em !important;
+    font-size: 0.8em;
+}
+
+.smallTitle
+{
+    font-size: 0.8em;
+    margin: 0.3em 0 0;
+}
+
+.recordTimeStamp
+{
+    margin: -4em 0;
+    float: right;
+    font-size: 0.7em;
+    color: #555;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+{ 
+    .recordTimeStamp
+    {
+        margin: -5em 0;
+    }  
+}
+
+.sortCaret
+{
+    margin: 0.5em 1em !important;
+    position: absolute;
+}
+
+.sortTitleDIV
+{
+    margin: 1.2em 4em 0;
+}
+
+.sortFiltersDIV
+{
+    font-size: 0.8em;
+    text-align: left;
+    border: #000 solid;
+    margin: 1.2em 0.3em;
+    padding: 0 0 1em;
+    background-color: rgba(255,255,255,0.6);
+    border: #23799d solid 0.2em;
+}
+
+#congressAdminContainerDIV .sortFiltersDIV
+{
+    margin: 1em 1em -0.5em;
+}
+
+.sortFiltersDIV form
+{
+    margin: auto;
+}
+
+.sortFiltersDIV input[type="button"]
+{
+    /*
+    font-size: 0.6em;
+    margin: -6.5em 0;
+    float: right;
+    */
+}
+
+.sortFiltersDIV div
+{
+    /*
+    font-size: 0.9em;
+    */
+}
+
+.sortADIV select,
+.sortBDIV select,
+.filterADIV select,
+.filterBDIV select,
+.filterBDIV input[type='date']
+{
+    width: 100%;
+}
+
+.sortFiltersDIV .button
+{
+    font-size: 0.6em;
+    margin: -6.5em 0;
+    float: right;
+}
+
+.sortFiltersDIV div
+{
+    font-size: 0.9em;
+}
+
+.sortFilterItemDIV
+{
+    display:inline-block;
+    padding: 0.5em 2em 0 0;
+}
+
+.sortFilterItemDIV input
+{
+    margin: 0.5em 0.5em 0 0.7em;
+}
+
+.caret,
+.trash,
+.edit
+{
+    cursor: pointer;
+    display:inline-block;
+    height: 0;
+    font-size: 1.4em !important;
+}
+
+.caret,
+.trash,
+.edit
+{
+    font-family: "Font Awesome 5 Free";
+}
+
+.addItem
+{
+    font-family: 'Font Awesome 5 Free';
+    cursor: pointer;
+    font-size: 1.4em !important;
+    padding: 0 0 1em 1em;
+    color: #777;
+}
+
+#addHospTimeDIV
+{
+    padding: 1em 0 1em 1em !important;
+}
+
+.longCongressBlockDIV .caret,
+.agendaItemDIV .caret
+{
+    float: left;
+}
+
+.caret
+{
+    margin: -1em 0;
+}
+
+.agendaItemDIV .caret
+{
+    margin: 0.4em 0.4em;
+    width: 1em;
+    height: auto;
+    float: none;
+}
+
+.agendaItemDIV .removalForm,
+.agendaItemDIV .editForm
+{
+    font-size: 0.5em;
+}
+
+.agendaItemDIV .removalForm
+{
+    margin: 0.5em 2em 0 0;
+}
+
+.agendaItemDIV .editForm
+{
+    margin: 0.5em auto;
+}
+
+
+.trash,
+.edit
+{
+    float: right;
+}
+
+.edit
+{
+    margin: 2em -0.3em 0 0;
+}
+
+.reservationDetailDIV .caret,
+.reservationDetailDIV .trash,
+.reservationDetailDIV .edit,
+.hotelBlockDIV .trash,
+.hotelBlockDIV .edit,
+.hospRoomBlockDIV .trash,
+.hospRoomBlockDIV .edit
+
+{
+    color: #999;
+}
+
+.titleStyle1
+{
+    margin: 1em 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.titleStyle2
+{
+    font-weight: bold;
+}
+
+.commentsDisplayDIV
+{
+    width: 100%;
+}
+
+.marginStyle1
+{
+    margin: 1em 0;
+}
+
+.copyStyle1,
+.copyStyle2,
+.copyStyle3
+{
+    font-weight: normal;
+    color: #777;
+}
+
+.copyStyle1,
+.copyStyle2
+{
+    font-size: 0.9em;
+}
+
+.copyStyle1
+{
+    text-align: center;
+    padding: 1em 0 !important;
+}
+
+.copyStyle2
+{
+    padding: 0.5em 0;
+}
+
+.copyStyle3
+{
+    padding: 0 0.5em;
+    text-transform: none !important;
+    font-size: 0.7em;
+}
+
+.indented
+{
+    margin-left: 2em;
+}
+
+.extraTopMargin
+{
+    margin-top: 1em !important;
+}
+
+.buttonBar1DIV
+{
+    
+}
+
+.buttonBar1DIV .button
+{
+    background: none;
+    color:#000;
+    margin: 1em;
+    padding: 0 0.5em;
+    font-size: 1.2em;
+}
+
+.buttonBar1DIV .selected
+{
+    border-bottom: #4d7f33 solid 6px;
+    font-weight: bold;
+}
+
+.timeSelectDIV
+{
+    display: inline-flex;
+}
+
+.selectTimeDIV,
+.selectMeridianDIV
+{
+    display: inline-block;
+    height: 2.2em;
+}
+
+.selectTimeDIV select
+{
+    width: 11.5em;
+}
+
+.selectMeridianDIV select
+{
+    width: 4.5em;
+    text-align-last: left;
+    padding-left: 0.6em;
+}
+
+/*#imageAreaDIV2,
+#editAreaDIV2,*/
+#imageAreaDIV3,
+#editAreaDIV3,
+#agendaAreaDIV form div,
+#agendaAreaDIV2,
+#agendaAreaDIV3 div,
+#agendaReplaceDIV2,
+#agendaReplaceDIV3,
+#agendaReplaceDIV4,
+#agendaAddDIV2,
+#agendaAddDIV3,
+#agendaAddDIV4,
+#agendaDownloadDIV form
+{
+    text-align: center;
+}
+
+/*.imageFileName,
+.editFileName,*/
+.agendaFileName,
+.agendaReplaceFile,
+.agendaAddFile
+{
+    font-size: 0.7em;
+    max-width: 18em;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+#imageAreaDIV2 .edit,
+#agendaAreaDIV2 .edit,
+#agendaReplaceDIV2 .edit,
+#agendaAddDIV2 .edit
+{
+    font-size: 1.1em !important;
+}
+
+#imageAreaDIV2 .edit
+{
+    margin: -1.5em 0 0 !important;
+}
+
+#agendaAreaDIV2 .edit,
+#agendaReplaceDIV2 .edit,
+#agendaAddDIV2 .edit
+{
+    margin: -1.5em 2em 0 !important;
+}
+
+.edit label
+{
+    cursor: pointer !important;
+}
+
+.datepicker
+{
+    cursor: pointer;
+}
+
+#constructionContainerDIV .contentDIV div
+{
+    margin: 1em;
+}
+
+.rotate90
+{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+      
+.rotate180
+{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.rotate270
+{
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.contextCloseIcon
+{
+    font-size: 0.9em;
+    margin: -0.5em;
+    cursor: pointer;
+}
+
+/***************************
+Header Bar
+***************************/
+
+#headerBarDIV
+{
+    width: 100%;
+    height: 2.4em;
+}
+
+#headerBarInnerDIV
+{
+    width: 100%;
+    height: 100%;
+    display:inline-flex;
+    color: #FFFFFF;
+}
+
+#headerBarInnerDIV div
+{
+    
+}
+
+#headerBarTitleDIV
+{
+    margin: auto 1em auto 0;
+    font-weight: bold;
+}
+
+#headerBarTitleDIV img
+{
+    width: 2em;
+    height: 2em;
+}
+
+#exitDIV
+{
+    cursor: pointer;
+    margin: auto 0.5em;
+    font-size: 2em;
+}
+
+#exitDIV a
+{
+    font-weight: 100;
+    color: #FFFFFF;
+}
+
+#loggedInAsDIV
+{
+    text-align: right;
+    width: 100%;
+    font-size: 0.6em;
+    color: #FFFFFF;
+    margin: auto 1em;
+}
+
+.adminColorDIV
+{
+    background-color:#23799d;
+}
+
+.basicUserDIV
+{
+    background-color: #4d7f33;
+}
+
+/***************************
+BG
+***************************/
+
+
+.BG
+{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: -10000;
+    background-repeat: no-repeat !important;	
+    background-position: top !important;
+}
+
+@media (min-aspect-ratio: 900/1601) and (max-aspect-ratio: 1601/900)
+{
+    .BG
+    {
+        left: 0;
+    }
+}
+
+@media (min-aspect-ratio: 900/1601) and (max-aspect-ratio: 1/1)
+{
+    .BG
+    {
+        background-size: calc(100vh) !important;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 1601/900)
+{
+    .BG
+    {
+        background-size: calc(100vw) !important;
+    }
+}
+
+@media (min-aspect-ratio: 1602/900)
+{
+	.BG
+	{
+		max-width: calc(177vh);
+		background-size: calc(100vw) !important;
+		left: calc((100vw - 177vh) / 2);	
+	}
+}
+
+@media (min-width: 128em)
+{
+    .BG
+    {
+        width: 128em !important;
+        max-width: 128em !important;
+        height: 128em !important;
+        background-size: 128em !important;
+        left: calc((100vw - 128em)/2) !important;
+        background-repeat:repeat-y !important;
+    }
+}
+
+@media (max-aspect-ratio: 900/1602)
+{
+	.BG
+	{
+		background-size: calc(177vw) !important;
+		left: 0;
+                background-repeat:repeat-y !important;
+	}
+}
+
+#homeContainerDIV .BG,
+#loginContainerDIV .BG,
+#constructionContainerDIV .BG,
+#successDIV .BG,
+#errorDIV .BG
+{
+    background: url("assets/images/Axoneron-App-BG-01.png");
+}
+
+#userContainerDIV .BG,
+#registrationContainerDIV .BG,
+#congressAdminContainerDIV .BG,
+#userAdminContainerDIV .BG,
+#hotelContainerDIV .BG,
+#hotelAdminContainerDIV .BG,
+#reservationContainerDIV .BG
+{
+	background: url("assets/images/Axoneron-App-BG-02.png");
+}
+
+#adminContainerDIV .BG,
+#congressContainerDIV .BG,
+#hospitalityAdminContainerDIV .BG,
+#hospitalityContainerDIV .BG,
+#agendaContainerDIV .BG,
+#accountContainerDIV .BG,
+#messagesContainerDIV .BG,
+#supportContainerDIV .BG
+{
+	background: url("assets/images/Axoneron-App-BG-03.png");
+}
+
+/***************************
+LOGIN
+***************************/
+
+#loginContainerDIV
+{
+    text-align: center;
+}
+
+#loginTitleDIV
+{
+    color: #FFF !important;
+    margin: 0 9em 0 0;
+    font-size: 1.4em;
+}
+
+#loginContainerDIV form
+{
+    margin: 6em 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+#loginContainerDIV form div
+{
+    margin: 2em 0 0;
+}
+
+#loginContainerDIV input[type="email"],
+#loginContainerDIV input[type="password"]
+{
+    background: none;
+    border: none;
+    border-bottom: #FFF solid 2px;
+    color: #FFF;
+    font-size: 1.1em;
+    font-style:italic;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder
+{
+    color: #FFF;
+    font-size: 1.1em;
+    font-style:italic;
+}
+
+#loginContainerDIV input[type="email"]:-internal-autofill-selected,
+#loginContainerDIV input[type="email"]:-webkit-autofill,
+#loginContainerDIV input[type="email"]:-webkit-autofill:hover, 
+#loginContainerDIV input[type="email"]:-webkit-autofill:focus,
+#loginContainerDIV input[type="password"]:-internal-autofill-selected,
+#loginContainerDIV input[type="password"]:-webkit-autofill,
+#loginContainerDIV input[type="password"]:-webkit-autofill:hover, 
+#loginContainerDIV input[type="password"]:-webkit-autofill:focus
+{
+    background: none !important;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-text-fill-color: #FFF;
+    -webkit-box-shadow: none;
+    transition: background-color 10000000s ease-in-out 0s;
+}
+
+
+
+#loginContainerDIV input[type="submit"]
+{
+    width: 8em;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: normal;
+    border: none;
+}
+
+#registrationContainerDIV .contentDIV
+{
+    text-align: center;
+}
+
+#registrationContainerDIV input[type="submit"]
+{
+    width: 12em;
+    display: block;
+}
+
+/*#userAdminContainerDIV input[type="submit"]
+{
+    text-transform: lowercase;
+}*/
+
+/***************************
+Home Page
+***************************/
+
+#homeHeaderDIV
+{
+    text-align: center;
+    height: 7em;
+    margin: 0.5em 0 0;
+}
+
+#homeImage
+{
+    height: 7em;
+}
+
+#homeContainerDIV .contentDIV 
+{
+    margin-top: 2em;
+}
+
+.homeMenuItemDIV
+{
+    font-weight: bold;
+    position: relative;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.homeMenuItemDIV::before
+{
+    content: '';
+    position: absolute;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: overlay;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.itemCongress::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Congress.jpg");
+}
+
+.itemReservations::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Reservation.jpg");
+}
+
+.itemSchedule::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Schedule.jpg");
+}
+
+.itemBookAFlight::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-BookFlight.jpg");
+}
+
+.itemMessages::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Messages.jpg");
+}
+
+.itemAccount::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Account.jpg");
+}
+
+.itemSupport::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Support.jpg");
+}
+
+.itemAdmin::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Admin.jpg");
+}
+
+.itemSignout::before
+{
+    background-image: url("assets/images/Axoneron-App-Home-Screen-Signout.jpg");
+}
+
+.homeMenuItemDIV div
+{
+    padding: 1.3em 1em;
+}
+
+.homeMenuItemDIV a
+{
+    font-weight: bold;
+}
+
+
+/***************************
+Congress Content Display
+***************************/
+
+#viewCongressDIV
+{
+    margin: 1em 0 0;
+}
+
+.shortCongressBlockDIV,
+.longCongressBlockDIV,
+.shortHospRoomBlockDIV
+{
+    padding: 0.8em 0;
+    text-align: center;
+}
+
+.longHospBookBlockDIV
+{
+    padding: 0.8em 1em !important;
+}
+
+.longHospBookBlockDIV div
+{
+    margin: 0.3em 0;
+}
+
+.longReservationDIV,
+.shortReservationDIV,
+.requestItemDIV,
+#insightsGeneralNotesDIV,
+#insightsImageFormDIV,
+.insightPostDIV,
+#addInsightPostFormDIV,
+#editInsightPostFormDIV
+{
+    background-color: rgba(255,255,255,0.6);
+    border: #8cc63f solid 0.2em;
+}
+
+.requestItemDIV
+{
+    max-width: 30em;
+    margin: 2em auto;
+    padding: 1em 2em !important;
+}
+
+#congressAdminContainerDIV .requestItemDIV
+{
+    max-width: unset;
+}
+
+.longReservationDIV
+{
+    padding: 1em 1em !important;
+}
+
+.shortReservationDIV
+{
+    margin: 0 0 2em;
+    padding: 1em 2em !important;
+}
+
+.shortCongressBlockDIV
+{
+    background-image: 
+        linear-gradient(to right, rgba(140, 198, 63, 0.5), rgba(121, 203, 247, 0.5)),
+        url("assets/images/Axoneron-App-Congress-Menu-01-Listing.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.shortCongressBlockDIV div
+{
+    margin: 0.1em 0;
+}
+
+.hotelBlockDIV,
+.hospRoomBlockDIV
+{
+    margin: 1em 0;
+}
+
+.longCongressBlockDIV
+{
+    color: #FFF !important;
+    background-image: 
+	linear-gradient(to right, rgba(140, 198, 63, 0.5), rgba(121, 203, 247, 0.5)),
+	url("assets/images/Axoneron-App-Congress-Menu-01-Listing.jpg");
+    background-blend-mode: normal;
+    background-size: cover;
+    background-position: center;
+    padding: 1em 1em;
+}
+
+.hotelBlockDIV,
+.hospRoomBlockDIV
+{
+    padding: 1em 1em 1em;
+}
+
+.hotelBlockDIV,
+#congressContainerDIV .modCongressHosp
+{
+    color: #000;
+    border: 0.2em solid #8cc63f;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 1em 1em;
+}
+
+.longCongressBlockDIV div,
+.reservationDetailDIV div
+{
+    padding: 0.1em 0;
+}
+
+.longCongressBlockDIV div,
+.reservationDetailDIV div
+{
+    padding: 0.1em 0;
+}
+
+.reservationDetailDIV .longReservationDIV .rezCaret
+{
+    margin: unset;
+    position: relative;
+    bottom: 0.5em;
+}
+
+.longCongressBlockDIV div,
+.hotelBlockDIV div,
+.hospRoomBlockDIV div,
+.shortAgendaItemBlockDIV div
+{
+    text-align: center;
+}
+
+.shortCongressShortName,
+.longCongressShortName,
+.shortHospRoomName,
+.longHospBookName
+{
+    font-weight: bold;
+}
+
+.shortCongressShortName
+{
+    font-size: 1.1em;
+    margin: 0.2em 0 0.4em !important;
+}
+
+.requestItemDIV .shortCongressShortName
+{
+    font-weight: normal;
+    margin: 0;
+}
+
+.requestItemDIV .shortCongressShortDates
+{
+    font-size: 1.1em;
+}
+
+.shortCongressFullName
+{
+    font-size: 0.8em;
+}
+
+.longHospBookName
+{
+    font-size: 1.2em;
+    padding: 0 0 0.5em;
+}
+
+.longCongressShortName
+{
+    font-size: 1.6em;
+}
+
+.longCongressVenue
+{
+    padding: 1em 0 0 !important;
+}
+
+.longCongressVenue,
+.reservationTitleDIV
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.reservationTitleDIV
+{
+    padding: 1em 0 !important;
+}
+
+.longCongressVenueDetail
+{
+    font-size: 0.8em;
+}
+
+.longHospRoomDetail
+{
+    margin: 0.8em 0 0;
+}
+
+.shortCongressShortDates,
+.shortCongressHotel,
+.shortHospRoomLocation,
+.shortHospRoomSize,
+.shortHospBookName,
+.longHospLocation,
+.longHospSize,
+.longHospRoomName
+{
+    font-size: 0.8em;
+}
+
+.longHospBookDateTime
+{
+    font-size: 0.8em;
+    padding: 0 0 0.5em;
+}
+
+.longHospBookOpenEnd
+{
+    font-size: 0.9em;
+    padding: 0.5em 0 !important;
+    margin: 0 0 0.7em !important;
+}
+
+.shortCongressHotel
+{
+    margin: 0;
+}
+
+.shortCongressShortDates
+.shortCongressHotel,
+.shortHospRoomLocation,
+.shortHospRoomSize,
+.longHospLocation,
+.longHospSize,
+.longHospOpenEnd
+{
+    padding: 0.1em 0;
+}
+
+.shortHospRoomSpan
+{
+    padding: 0.5em 0 0;
+}
+
+
+#reservationsListDIV
+{
+    padding: 0.5em 1em;
+}
+
+.reservationItemDIV
+{
+    padding: 0 0.2em 1.5em;
+}
+
+.hotelInfoDIV
+{
+    padding: 0.5em 2em 1em !important;
+}
+
+.requestorInfoDIV
+{
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.requestTypeDIV
+{
+    margin: -5.5em 0;
+    float: right;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+}
+
+.availabilityDIV
+{
+    background-color: rgba(35,121,157,0.7);
+    padding: 1em 2em 0.5em 1em;
+    margin: -1em 0 3em;
+}
+
+.availabilityDIV,
+.availabilityDIV select,
+.availabilityDIV option,
+.availabilityDIV .datepicker,
+.availabilityDIV .dateSelectDIV::after,
+.availabilityDIV .selectTimeDIV::after,
+.availabilityDIV .selectMeridianDIV::after
+{
+    color:#FFF;
+}
+
+.availabilityRemove
+{
+    float:right;
+    margin: -2.2em -0.7em;
+}
+
+.hospRoomAvailListDIV div
+{
+    margin: 0.5em 0;
+}
+
+.shortHospRoomTime
+{
+    font-weight: normal;
+    font-size: 0.8em;
+    text-transform:none;
+}
+
+#bookHospFormDIV
+{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.congressEdit
+{
+    margin: -0.2em 0.8em;
+}
+
+.congressEdit a,
+.congressEdit a:visited,
+.congressEdit a:hover
+{
+    color: #FFF;
+}
+
+#congressAck
+{
+    width: auto !important;
+}
+
+#congressAck input[type='submit']
+{
+    width: 100% !important;
+    margin: auto !important;
+}
+
+/***************************
+Agenda Display
+***************************/
+
+.shortAgendaItemBlockDIV
+{
+    padding: 0.6em 0;
+}
+
+.shortAgendaItemBlockDIV2
+{
+    display: inline-table;
+    padding: 0.6em 0 0;
+}
+
+.agendaColumn div
+{
+    display: block;
+}
+
+.agendaColumn
+{
+    display: inline-block;
+    overflow:hidden;
+    min-height: 2em;
+}
+
+.shortAgendaTitle2,
+.shortAgendaSubTitle2
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.2em 0;
+}
+
+.shortAgendaTitle2
+{
+    font-weight: bold;
+}
+
+/*.agendaListDIV .agendaListDIV.agendaExtendedDetail:active .shortAgendaTitle2
+{
+    white-space: normal;
+}*/
+
+.agendaExtendedDetail .agendaDetailItem
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.agendaGroupDIV
+{
+    text-align:left;
+}
+
+.agendaExtendedDetail
+{
+    display: grid;
+}
+
+.agendaExtendedDetail div
+{
+    margin: 0 1em 0.3em 0;
+}
+
+.agendaItemTypeDIV,
+.agendaItemDateDIV,
+.agendaItemTitleDIV
+{
+    font-weight: bold;
+}
+
+.agendaItemTypeDIV
+{
+    color: #777;
+}
+
+.agendaItemSubTitleDIV
+{
+    font-style: italic;
+}
+
+.shortAgendaItemLine1
+{
+    font-weight: bold;
+}
+
+.shortAgendaItemLine2
+{
+    font-size: 0.8em;
+}
+
+.shortAgendaItemLine3
+{
+    margin: 0.5em 0 0;
+}
+
+#agendaItemDetailViewDIV
+{
+    margin: 2em;
+}
+
+#agendaItemDetailViewDIV .agendaItemDisplay
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    hyphens: auto;
+}
+
+#agendaItemDetailViewDIV .hRow
+{
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    hyphens: auto;
+}
+
+#agendaContainerDIV .agendaItemColumn1
+{
+    width: 7em;
+    margin-right: 0.5em;
+    text-align: right;
+}
+
+#agendaContainerDIV .agendaItemColumn2
+{
+    font-weight: bold;
+}
+
+#agendaItemDetailViewDIV .hRow div
+{
+    margin-left: unset;
+}
+
+#insightsDIV .subtitleDIV,
+#insightsDIV #insightsGeneralNotesDIV,
+#insightsDIV #insightsGeneralNotesDIV div
+{
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+}
+
+#insightsDIV #generalNotesCaret,
+.insightTrash,
+.insightEdit,
+#imageFileLabel1
+{
+    color: #999;
+}
+
+/*#insightsGeneralNotesDIV
+{
+    height: 10em !important;
+}*/
+
+#insightsGeneralNotesDIV,
+.insightPostDIV
+{
+    position: relative;
+}
+
+#insightsDIV #generalNotesCaret
+{
+    margin-left: 0.5em;
+    position: absolute;
+    font-size: 2em !important;
+}
+
+#insightsDIV .noteCaretContract
+{
+
+    bottom: 1.15em;
+}
+
+#insightsDIV .noteCaretExpand
+{
+    padding-top: 2em;
+}
+
+#insightsPostsDIV .insightTrash
+{
+    display: inline-block;
+    margin: 0.75em 0.65em 0 0;
+}
+
+#insightsPostsDIV .insightEdit
+{
+    display: inline-block;
+    margin: 2.25em 0.3em 0 0;
+}
+
+/*#insightsDIV #generalNotesCaret
+{
+    margin-left: 0.5em;
+    font-size: 2em !important;
+    position: relative;
+    display: inline;
+    top: 2em;
+    margin-top: 2em !important;
+}*/
+
+.insightTrash
+{
+    
+}
+
+.insightEdit
+{
+    
+}
+
+#addInsightPostFormDIV .formLabel
+{
+    margin-top: 2em;
+}
+
+#addInsightPostFormDIV .button
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#addInsightPostFormDIV .addInsightButton,
+#editInsightPostFormDIV .editInsightButton
+{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#addInsightsDIV .itemAddForm
+{
+    width: 100%;
+}
+
+#addInsightsDIV .addItem label
+{
+    font-size: 1em;
+    margin: 0.5em 0;
+    position: absolute;
+}
+
+#insightsGeneralNotesDIV .bold,
+#insightsGeneralNotesDIV #insightsGeneralNotesContainer
+{
+    margin-left: 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#insightsGeneralNotesDIV #insightsGeneralNotesContainer
+{
+    margin-right: 2em;
+}
+
+
+#insightsGeneralNotesContainer
+{
+/*    height: 6em;*/
+    max-height:6em;
+    min-height:4em;
+    overflow: hidden;
+}
+
+.insightsGeneralNotesExpanded
+{
+    max-height: 100% !important;
+    overflow:visible !important;
+}
+
+/*body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}*/
+
+.notePadDIV
+{
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw);
+    height: calc(100vh);
+    background: url("assets/images/Axoneron-App-BG-02.png");
+    background-size: cover;
+/*    background: #FFF;*/
+/*    border: 0.2em solid #8cc63f;*/
+}
+
+.notePadDIV form
+{
+    width: calc(100vw);
+    height: calc(75vh);
+    margin-top: 4em;
+}
+
+.notePadDIV form div
+{
+    padding: 0 !important;
+}
+
+.notePadTextDIV
+{
+/*    margin: 1em 1em 1.3em;*/
+/*    background-color: rgba(255,255,255,0.6);*/
+    margin: 1.3em 1em 0 1em;
+    background: white;
+    border: #8cc63f solid 0.2em;
+}
+
+#notePad
+{
+    width: calc(100vw - 4.5em);
+    height: calc(75vh - 6em);
+    padding: 1em;
+    background: transparent;
+    line-height: 1.25em;
+/*    font-size: 1.5em;*/
+}
+
+#notePad,
+#notePadData
+{
+    white-space: pre-wrap;
+}
+
+#notePad:focus
+{
+    outline-color: #FFF;
+}
+
+.notePadButton
+{
+    text-align: center !important;
+    margin: 7.5vh 0;
+}
+
+.doubleNotePadButton
+{
+    text-align: center !important;
+    margin: 3vh 0;
+}
+
+.notePadButton input,
+.doubleNotePadButton input
+{
+    padding: 0.5em;
+/*    font-size: 1.5em;*/
+/*    width: auto !important;*/
+/*    margin: 1.5em 0 !important;*/
+}
+
+.notePadFormDIV #headerBarInnerDIV
+{
+    font-size: 1em;
+    margin: 0 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 2.5em;
+    background-color: #23799d;
+/*    user-select: none;*/
+/*    pointer-events: none;*/
+}
+
+#headerBarInnerDIV input[value="×"]
+{
+    background-color: unset;
+    color: #fff;
+    display: inline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0.75em;
+    height: 0.25em;
+    font-size: 2em;
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+.insightPostDIV
+{
+    margin: 1em 0;
+}
+
+/*.insightShortTitleDIV
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}*/
+
+.insightShortTitleDIV,
+.insightShortNotesDIV
+{
+    padding: 0.3em;
+    margin: 1em 2em;
+    word-break: break-word;
+/*    hyphens: auto;*/
+}
+
+.insightShortTitleDIV
+{
+    font-weight: bold;
+}
+
+.downloadLinkDIV
+{
+    text-align: center;
+}
+
+.userInsightCaret,
+.userInsightItemCaret,
+.userInsightPostCaret
+{
+    color: #777;
+}
+
+.userInsightCaret
+{
+    margin: 0.6em 1em;
+}
+
+.userInsightItemCaret,
+.userInsightPostCaret
+{
+    margin: 0.3em 1em 0;
+    position: absolute;
+    font-size: 1em !important;
+}
+
+.userInsightProfileDIV
+{
+    margin: 0.6em 1em;
+}
+
+.userInsightProfileDIV
+{
+    display: flex;
+}
+
+.userInsightItemsDIV
+{
+    margin: 0 1em;
+}
+
+.userInsightItemDIV
+{
+    margin: 0.5em 0;
+    border: #79cbf7 solid 2px;
+    padding: 0.2em 0.5em 0.5em;
+}
+
+.userInsightItemTitleDIV,
+.userInsightPostTitleDIV
+{
+    font-weight: bold;
+    font-size: 0.7em;
+    padding: 0.7em 0.5em 0.5em 4em;
+}
+
+.userInsightItemGenNotesDIV,
+.userInsightPostNotesDIV
+{
+    letter-spacing: 0;
+    font-size: 0.6em;
+}
+
+.userInsightItemGenNotesDIV
+{
+    margin: 1em;
+}
+
+.userInsightPostNotesDIV
+{
+    padding: 1em;
+}
+
+.userInsightPostImageDIV
+{
+    text-align: center;
+    padding: 0 0 0.5em;
+}
+
+.userInsightPostImageDIV img
+{
+    width: 14em;
+}
+
+.insightsContextMenu
+{
+    position: absolute;
+    border: #23799d solid 2px;
+    padding: 1em;
+    background: #FFF;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.4);
+    color: #555;
+}
+.copyUserInsights
+{
+    padding: 1em 0 0;
+    cursor: pointer;
+}
+
+/***************************
+Calendar Displays
+***************************/
+
+.hospRoomSegmentDIV
+{
+    display: inline-table;
+}
+
+.hospRoomSegmentDIV div
+{
+    display: block;
+    position: relative;
+}
+
+.hospRoomSegmentDate
+{
+    margin: auto;
+}
+
+.hospRoomSegmentStart
+{
+    width: 100%;
+    text-align: center;
+    /*
+    top: 2.3em;
+    font-size: 0.7em;
+    */
+}
+
+.hospRoomSegmentAuthor
+{
+    width: 100%;
+    text-align: center;
+    /*
+    top: 4.4em;
+    font-size: 0.5em;
+    */
+}
+
+.scheduleDIV
+{
+    margin: auto;
+    text-align: center;
+}
+
+.segmentAvailable
+{
+    background-color: rgba(255,255,255,0.2);
+    cursor: pointer !important;
+    outline: #bbb thin solid;
+}
+
+.segmentUnavailable,
+.emptySegment
+{
+    background-color: #bbb;
+    cursor:default !important;
+    color: #FFF;
+}
+
+.segmentUnavailable
+{
+    outline: #999 thin solid;
+}
+
+.scheduleHeaderDIV
+{
+    background-color: #eaffcc;
+    padding: 0.7em;
+    margin: 0.2em 0;
+}
+
+.emptySegment
+{
+    text-align: center;
+    outline: #bbb thin solid;
+}
+
+.emptySegment div
+{
+    width: 100%;
+    text-align: center;
+    top: 2em;
+    font-size: 0.8em;
+}
+
+.segmentSelected
+{
+    background-color: #eaffcc;
+    outline: #48ea48 thin solid;
+}
+
+
+.hospCalendarDIV
+{
+    text-align: left;
+    margin: 0 1em;
+    display: grid;
+}
+
+.calendarDIV1
+{
+    margin: 0.5em 0 1.5em;
+}
+
+.calendarDIV2
+{
+    margin: 0 2em;
+}
+
+.calendarDIV1,
+.calendarDIV1 div
+{
+    display: inline-block;
+}
+
+.dateBlock
+{
+    border: #000 1px solid;
+    width: 4em;
+    height: 4em;
+    margin: 0 -4px;
+    cursor:pointer;   
+}
+
+.dateBlock.selected
+{
+    background-color: #000;
+    color: #FFF;
+    cursor:default;
+}
+
+.dateBlock.disabled
+{
+    color: #999;
+    cursor: default;
+}
+
+.dateBlockInnerDIV
+{
+    top:0.2em;
+    position: relative;
+}
+
+.dateBlockMonth
+{
+    text-transform: uppercase;
+}
+
+.dateBlockDate
+{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.dateBlockInnerDIV,
+.dateBlockInnerDIV div
+{
+    display: block !important;
+}
+
+.leftArrow,
+.rightArrow
+{
+    font-size: 2em;
+    font-weight: bold;
+    cursor:pointer;
+    position: relative;
+    top: -0.2em;
+}
+
+/***************************
+Account Settings
+***************************/
+
+#accountImageDIV,
+.shortUserImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Default.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#accountImageDIV
+{
+    width: 6em;
+    height: 6em;
+    margin: 0 auto 1em;
+}
+
+#accountImage
+{
+    width: 6em;
+    height: 6em;
+}
+
+#accountContainerDIV .contentDIV
+{
+    margin: 0 1em;
+}
+
+#accountContainerDIV .separator,
+#messagesContainerDIV .separator
+{
+    height: 2px;
+}
+
+#accountProfileDIV1
+{
+    text-align: center;
+    margin: 0.5em 1em 1em;
+}
+
+#accountProfileDIV2
+{
+    margin: 1em;
+}
+
+#accountProfileDIV2 div
+{
+    margin: 0.4em 0;
+    display: flex;
+}
+
+#accountNameDIV,
+#accountTitleDIV
+{
+    margin: 0.3em 0 0;
+}
+
+.accountLabel
+{
+    text-align: right;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+
+.accountData,
+.accountLabel
+{
+    font-size: 0.8em;
+}
+
+.accountLabel
+{
+    padding: 0 0.4em 0 0;
+}
+
+.accountEdit,
+.passwordEdit
+{
+    font-size: 1.1em !important;
+    margin: 0;
+}
+
+.passwordEditDIV
+{
+    margin: 0.3em 0;
+}
+
+.passwordEditDIV,
+.passwordEditDIV div
+{
+    display: flex;
+}
+
+.passwordEdit
+{
+    margin: -0.1em 0 0 1em;
+}
+
+#resetPasswordDIV1
+{
+    width: calc(100vw);
+    height: calc(100vh);
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat:repeat-y;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#resetPasswordDIV2
+{
+    width: calc(100vw - 3em);
+    height: calc(100vh - 3em);
+    margin: 1.5em auto;
+    background: url("assets/images/Axoneron-App-BG-03.png");
+    background-size: cover;
+    background-position: center;
+}
+#resetPasswordDIV2 .button
+{
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+/***************************
+Messages Settings
+***************************/
+
+.shortUsersDIV div
+{
+    padding: 0;
+}
+
+.selectedForGroup
+{
+    background-color: rgba(35,121,157,0.4);
+}
+
+form .shortUsersDIV
+{
+    cursor: pointer;
+}
+
+form .shortUsersDIV div
+{
+    display: flex;
+}
+
+form .shortUsersDIV .shortUserNameDIV
+{
+    padding-top: 1.5em;
+}
+
+#messagesContainerDIV .contentDIV,
+#supportContainerDIV .contentDIV
+{
+    margin: 0 1.5em;
+}
+
+#messagesContainerDIV .pageTitleDIV
+{
+    padding: 1em 0 0.5em;
+}
+
+.shortUserMessageDIV,
+.conversationDIV2
+{
+    display: flex;
+}
+
+.shortUserMessageDIV
+{
+    margin: 0.3em 0.3em;
+}
+
+.conversationDIV2
+{
+    margin: 0.6em 1em;
+}
+
+.shortUserDataDIV,
+.shortConvoDataDIV1
+{
+    display: block;
+    height: 2.6em;
+    text-align: left;
+}
+
+.shortUserDataDIV
+{
+    width: 16em;
+    overflow: hidden;
+    padding: 0.2em 0;
+}
+
+.shortConvoDataDIV1
+{
+    width: 100%;
+    margin: 0.6em 0 -0.6em;
+}
+
+.shortUserImageDIV
+{
+    width: 3em;
+    height: 3em;
+    margin: 0 1em 0 0;
+    flex-shrink: 0;
+}
+
+.shortUserNameDIV
+{
+    font-weight: bold;
+    margin: 0 0 0.2em;
+}
+
+.shortUserNameDIV,
+.shortUserTitleDIV
+{
+    font-size: 0.7em;
+}
+
+.shortUserMessageDataDIV,
+.shortUserTitleDIV,
+.sentMessageDIV2,
+.receivedMessageDIV2
+{
+    line-height: 1.3em;
+}
+
+.shortUserMessageDataDIV,
+.shortUserTitleDIV
+{
+    color: #555;
+}
+
+.shortUserMessageDataDIV
+{
+    letter-spacing: 0;
+    font-size: 0.6em;
+}
+
+.shortUserUnreadMessageCount
+{
+    font-size: 0.7em;
+    padding: 0.5em 0.5em 0em !important;
+    min-width: 1.3em;
+    height: 1.3em;
+    text-align: center;
+    background-color: #8cc63f;
+    color: #333;
+}
+
+.openMessage,
+.createMessageGroup
+{
+    font-family: 'Font Awesome 5 Free';
+    cursor: pointer;
+    font-size: 1.4em !important;
+    margin: 1em;
+    color: #777;
+}
+
+/*.agendaAddFile
+{
+    font-size: 0.7em;
+    max-width: 18em;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.sentMessageDIV2,
+.receivedMessageDIV2
+{
+    max-width: 18em;
+    width:fit-content;
+    margin: 0.7em 0;
+    padding: 0.7em;
+    border-radius: 0.2em;
+    font-size: 0.7em;
+    color: #000;
+    letter-spacing: 0;
+/*    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    word-break: break-word;
+}
+
+.sentMessageDIV2
+{
+    background-color: rgba(140,198,63,0.4);
+}
+
+.receivedMessageDIV2
+{
+    background-color: rgba(35,121,157,0.4);
+    float: right;
+}
+
+.conversationDIV3
+{
+    display:grid;
+}
+
+.senderInfoDIV,
+.messageTimestamp
+{
+    font-size: 0.5em;
+    letter-spacing: 0;
+}
+
+.senderInfoDIV
+{
+    text-align: right;
+    margin: 1em 0 -0.8em;
+}
+
+.messageTimestamp
+{
+    text-align: center;
+    margin: 0.8em 0 -0.6em;
+}
+
+.groupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Custom_Group.png");
+}
+
+.allGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_All.png");
+}
+
+.axoneronGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Axoneron.png");
+}
+
+.adminGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Admin.png");
+}
+
+.supportGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Support.png");
+}
+
+.medicalGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Medical.png");
+}
+
+.commercialGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Commercial.png");
+}
+
+.engageGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_Engage.png");
+}
+
+.pmGroupImageDIV
+{
+    background-image: url("assets/images/Message_Icon_PixMo.png");
+}
+
+.shortPhoneDIV,
+.shortEmailDIV
+{
+    padding: 1em 1em 0 0 !important;
+}
+
+
+/***************************
+MEDIA QUERIES
+***************************/
+
+@media (min-width: 18em)
+{
+
+    .userInsightPostImageDIV img
+    {
+        max-width: 16em;
+    }
+
+    form
+    {
+        width: 17em;
+    }
+    
+    input,
+    textarea,
+    select,
+    .datepicker,
+    .timeSelectDIV
+    {
+        width: 16em;
+    }
+    
+    .timeSlotDate
+    {
+        width: 14.5em;
+    }
+    
+    .timeSlotTime
+    {
+        width: 9em !important;
+    }
+    
+    .availabilityDIV
+    {
+        width: 14em;
+    }
+    
+    .availabilityDIV .dateSelectDIV::after
+    {
+        right: -0.5em;
+    }
+    
+    .availabilityDIV .selectMeridianDIV::after
+    {
+        margin-right: 0.5em;
+    }
+    
+    #addInsightPostFormDIV form,
+    #editInsightPostFormDIV form
+    {
+        width: 14em;
+    }
+    
+    #addInsightPostFormDIV input:not(.addInsightButton),
+    #addInsightPostFormDIV textarea,
+    #editInsightPostFormDIV input:not(.editInsightButton),
+    #editInsightPostFormDIV textarea
+    {
+        width: 13em;
+    }
+    
+    .editInsightSubTitle
+    {
+        width: 15em;
+        margin: 1.5em auto;
+    }
+    
+    #imageAreaDIV .button
+    {
+        width: 9.5em;
+        margin: 0 1em !important;
+    }
+    
+    #agendaAreaDIV .button,
+    #agendaReplaceDIV .button,
+    #agendaAddDIV .button,
+    #editAreaDIV3 .button
+    {
+        width: 9.5em;
+        margin: 0 3em !important;
+    }
+    
+    #resetPasswordDIV2 .button
+    {
+        width: 9.5em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+    
+    input[type="submit"],
+    input[type="button"]
+    {
+        width: 11.5em;
+        margin: 0 3em;
+    }
+    
+    #userAdminContainerDIV input[type="submit"]
+    {
+        margin: 0 2.75em;
+    }
+    
+    #editInsightPostFormDIV #editAreaDIV3 .button
+    {
+        margin: 0 1em !important;
+    }
+    
+    #addInsightPostFormDIV input[type="submit"],
+    #editInsightPostFormDIV input[type="submit"]
+    {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    
+    #imageAreaDIV2 .imageFileName,
+    #editAreaDIV2 .editFileName
+    {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 85%;
+        font-size: 1em;
+    }
+    
+    #imageAreaDIV2 .imageEdit,
+    #editAreaDIV2 .imageEdit
+    {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    #login-container input
+    {
+        width: 14em;
+    }
+
+    #congressAdminContainerDIV .pageTitleDIV,
+    #userAdminContainerDIV .pageTitleDIV,
+    #registrationContainerDIV .pageTitleDIV
+    {
+        width: 14em;
+    }
+
+/*    #userAdminContainerDIV .selectDIV::after
+    {
+        margin-top: -0.95em;
+    }*/
+    
+    .selectDIV::after
+    {
+        margin-top: -0.95em;
+    }
+    
+    @-moz-document url-prefix() {
+        .selectDIV::after
+            {
+                line-height: 0.95em;
+                margin-top: -0.92em;
+            }
+    }
+    
+    #userAdminContainerDIV .selectDIV::after
+    {
+        margin-right: 0.3em;
+    }
+    
+    .dateSelectDIV::after
+    {
+        top: -1.25em;
+        right: 0.5em;
+    }
+    
+    .shortAgendaTime2,
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2,
+    .agendaExtendedDetail,
+    .requestItemDIV,
+    .sortFiltersDIV
+    {
+        font-size: 0.6em;
+    }
+    
+    .shortAgendaTime2
+    {
+        line-height: 1.6em;
+    }
+    
+    .agendaListDIV
+    {
+        margin: 0 1em;
+    }
+    
+    .agendaExtendedDetail
+    {
+        margin: 0 0 0.5em 3em !important;
+    }
+
+    .agendaExtendedDetail .agendaDetailItem
+    {
+        width: calc(100vw - 18em);
+    }
+    
+    #sortForm .selectDIV::after
+    {
+        right: -0.05em;
+    }
+    
+    #sortForm .hRow
+    {
+        width: 100%;
+    }
+    
+    .filterADIV,
+    .filterBDIV
+    {
+        width: 45%;
+    }
+    
+    .sortFiltersDIV form
+    {
+        width: 18em;
+    }
+    
+    #applyFilters input[type="button"]
+    {
+        margin: 0 3.5em;
+    }
+    
+    .shortHotelName,
+    .shortHotelAddress1,
+    .shortHotelAddress2,
+    .shortHotelAddress3
+    {
+        width: calc(100vw - 7em);
+        margin: 0 auto;
+    }
+    
+    #agendaItemDetailViewDIV .hRow
+    {
+        width: calc(100vw - 2em);
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: calc(100vw - 12em);
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: calc(100vw - 4em)
+    }
+    
+    .shortAgendaTime2
+    {
+        width: 7.5em;
+    }
+
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2
+    {
+        width: calc(100vw - 18em);
+    }
+
+    .leftArrow,
+    .rightArrow
+    {
+        top: 0;
+    }
+    
+    .calendarDIV2
+    {
+        margin: 0 0.8em;
+    }
+    
+    .dateBlock
+    {
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0 -2.7px;
+    }
+
+    .dateBlockInnerDIV
+    {
+        top:0.4em;
+    }
+
+    .dateBlockMonth
+    {
+        font-size: 0.5em;
+    }
+
+    .dateBlockDate
+    {
+        font-size: 1.0em;
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: calc(((100vw - 2em) / 6));
+        height: calc(((100vw - 2em) / 6));
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2em;
+        font-size: 0.6em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 3.1em;
+        font-size: 0.5em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1em;
+    }
+    
+    body
+    {
+        max-width: calc(100vw);
+    }
+}
+
+@media (min-width: 24em)
+{
+    .userInsightPostImageDIV img
+    {
+        max-width: 21em;
+    }
+    
+    .dateBlock
+    {
+        width: 3.15em;
+        height: 3.15em;
+        margin: 0 -3.1px;
+    }
+    
+    .sortFiltersDIV form
+    {
+        width: 19em;
+    }
+    
+    .hRow .sortADIV,
+    .hRow .sortBDIV
+    {
+        width: 11em;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+    { 
+        .hRow .sortADIV,
+        .hRow .sortBDIV
+        {
+            width: 12em;
+        }  
+    }
+    
+    .hRow #filter1ADIV,
+    .hRow #filter1BDIV
+    {
+        width: 11em;
+    }
+    
+        @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+    { 
+        .hRow #filter1ADIV,
+        .hRow #filter1BDIV
+        {
+            width: 12em;
+        }  
+    }
+    
+    #applyFilters input[type="button"]
+    {
+        margin: 0 5em;
+    }
+    
+    .dateBlockMonth
+    {
+        font-size: 0.7em;
+    }
+
+    .dateBlockDate
+    {
+        font-size: 1.5em;
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: calc(((100vw - 2em) / 7));
+        height: calc(((100vw - 2em) / 7));
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 32em)
+{
+    .userInsightPostImageDIV img
+    {
+        max-width: 28em;
+    }
+    
+    form
+    {
+        width: 20em;
+    }
+    
+    input,
+    textarea,
+    select,
+    .datepicker,
+    .timeSelectDIV
+    {
+        width: 18em;
+    }
+    
+    #addInsightPostFormDIV form,
+    #editInsightPostFormDIV form
+    {
+        width: 17em;
+    }
+    
+    #addInsightPostFormDIV input:not(.addInsightButton),
+    #addInsightPostFormDIV textarea,
+    #editInsightPostFormDIV input:not(.editInsightButton),
+    #editInsightPostFormDIV textarea
+    {
+        width: 16em;
+    }
+    
+    .editInsightSubTitle
+    {
+        width: 18.5em;
+    }
+    
+    #imageAreaDIV .button
+    {
+        width: 9.5em;
+        margin: 0 2em !important;
+    }
+    
+    #agendaAreaDIV .button,
+    #agendaReplaceDIV .button,
+    #agendaAddDIV .button,
+    #editAreaDIV3 .button
+    {
+        width: 9.5em;
+        margin: 0 4em !important;
+    }
+    
+    #userAdminContainerDIV .selectDIV::after
+    {
+        margin-right: 0.6em;
+    }
+    
+    #resetPasswordDIV2 .button
+    {
+        width: 9.5em;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+    
+    input[type="submit"],
+    input[type="button"]
+    {
+        width: 11.5em;
+        margin: 0 4em;
+    }
+    
+    #userAdminContainerDIV input[type="submit"]
+    {
+        margin: 0 4.25em;
+    }
+    
+    #editInsightPostFormDIV #editAreaDIV3 .button
+    {
+        margin: 0 2.75em !important;
+    }
+    
+    #addInsightPostFormDIV input[type="submit"],
+    #editInsightPostFormDIV input[type="submit"]
+    {
+        margin-left: 2.75em;
+        margin-right: 2.75em;
+    }
+    
+    #congressAdminContainerDIV input[type="submit"]
+    {
+        margin-left: 4.25em;
+        margin-right: 4.25em;
+    }
+    
+    #addHospRoomFormDIV .availabilityDIV .dateSelectDIV::after
+    {
+        right: -0.1em;
+        top: -1.205em;
+    }
+    
+    #addHospRoomFormDIV .timeSlotTime
+    {
+        width: 11.5em !important;
+    }
+    
+    #login-container input,
+    #addHospRoomFormDIV .datepicker
+    {
+        width: 16em;
+    }
+    
+    #congressAdminContainerDIV .pageTitleDIV,
+    #userAdminContainerDIV .pageTitleDIV,
+    #registrationContainerDIV .pageTitleDIV
+    {
+        width: 16.5em;
+    }
+    
+    .selectTimeDIV select
+    {
+        width: 12em;
+    }
+
+    .selectMeridianDIV select
+    {
+/*        width: 5.5em;*/
+    }
+    
+    .selectDIV::after
+    {
+/*        right: 0.0em;*/
+    }
+    
+    @-moz-document url-prefix() {
+        .availabilityDIV .selectMeridianDIV::after
+            {
+                margin-right: 0.3em;
+            }
+    }
+    
+    .dateSelectDIV::after
+    {
+        top: 0.25em;
+        right: 1.25em;
+    }
+    
+    #addHospRoomFormDIV .availabilityDIV
+    {
+        width: 16em;
+    }
+    
+    #applyFilters input[type="button"]
+    {
+        margin: 0 5.5em;
+    }
+    
+    .shortAgendaTime2,
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2,
+    .agendaExtendedDetail
+    {
+        font-size: 0.7em;
+    }
+    
+    .shortAgendaTime2
+    {
+        line-height: 1.6em;
+    }
+    
+    .agendaListDIV
+    {
+        margin: 0 2em;
+    }
+
+    .shortAgendaTime2
+    {
+        width: 8em;
+    }
+
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2
+    {
+        width: calc(100vw - 18em);
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: calc(((100vw - 2em) / 8));
+        height: calc(((100vw - 2em) / 8));
+    }
+    
+    .agendaExtendedDetail .agendaDetailItem
+    {
+        width: calc(100vw - 20em);
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1.4em;
+    }
+    .requestItemDIV,
+    .sortFiltersDIV
+    {
+        font-size: 1em;
+    }
+}
+
+
+
+@media (min-width: 48.1em)  
+{
+    .userInsightPostImageDIV img
+    {
+        max-width: 42em;
+    }
+    
+    form
+    {
+        width: 24em;
+    }
+    
+    input,
+    textarea,
+    select,
+    .datepicker,
+    .timeSelectDIV
+    {
+        width: 23em;
+    }
+    
+    #addInsightPostFormDIV form,
+    #editInsightPostFormDIV form
+    {
+        width: 21em;
+    }
+    
+    #addInsightPostFormDIV input:not(.addInsightButton),
+    #addInsightPostFormDIV textarea,
+    #editInsightPostFormDIV input:not(.editInsightButton),
+    #editInsightPostFormDIV textarea
+    {
+        width: 20em;
+    }
+    
+   .editInsightSubTitle
+    {
+        width: 23em;
+    }
+    
+    #imageAreaDIV .button
+    {
+        width: 9.5em;
+        margin: 0 5em !important;
+    }
+    
+    #agendaAreaDIV .button,
+    #agendaReplaceDIV .button,
+    #agendaAddDIV .button,
+    #editAreaDIV3 .button
+    {
+        width: 9.5em;
+        margin: 0 6em !important;
+    }
+    
+    #resetPasswordDIV2 .button
+    {
+        width: 9.5em;
+        margin-left: 6em;
+        margin-right: 6em;
+    }
+    
+    input[type="submit"],
+    input[type="button"]
+    {
+        width: 11.5em;
+        margin: 0 6em;
+    }
+    
+    #userAdminContainerDIV input[type="submit"]
+    {
+        margin: 0 6.25em;
+    }
+    
+    #editInsightPostFormDIV #editAreaDIV3 .button {
+        margin: 0 5em !important;
+}
+    
+    #addInsightPostFormDIV input[type="submit"],
+    #editInsightPostFormDIV input[type="submit"]
+    {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    
+    #congressAdminContainerDIV input[type="submit"]
+    {
+        margin-left: 6.25em;
+        margin-right: 6.25em;
+    }
+    
+    #addHospRoomFormDIV .availabilityDIV .dateSelectDIV::after
+    {
+        top: -1.3em;
+    }
+    
+    #login-container input
+    {
+        width: 22em;
+    }
+    
+    #addHospRoomFormDIV .datepicker
+    {
+        width: 20em;
+    }
+    
+/*    #agendaContainerDIV .contentDIV
+    {
+        left: 3em;
+    }*/
+
+    .availabilityDIV .selectMeridianDIV::after
+    {
+        margin-right: 1em;
+    }
+    
+    #userAdminContainerDIV .selectDIV::after
+    {
+        margin-right: 0.3em;
+    }
+
+    #applyFilters input[type="button"]
+    {
+        margin: 0 4.25em;
+    }
+    
+    .shortHotelName,
+    .shortHotelAddress1,
+    .shortHotelAddress2,
+    .shortHotelAddress3
+    {
+        width: 100%;
+    }
+
+    #congressAdminContainerDIV .pageTitleDIV,
+    #userAdminContainerDIV .pageTitleDIV,
+    #registrationContainerDIV .pageTitleDIV
+    {
+        width: 20em;
+    }
+    
+    .selectTimeDIV select
+    {
+        width: 14.5em;
+    }
+
+    .selectMeridianDIV select
+    {
+        width: 8em;
+    }
+
+    #addHospRoomFormDIV .selectMeridianDIV::after
+    {
+        right: 0.05em;
+    }
+    
+    @-moz-document url-prefix() {
+        #addHospRoomFormDIV .selectMeridianDIV::after
+            {
+                right: 0;
+            }
+    }
+    
+    .agendaExtendedDetail .agendaDetailItem
+    {
+        width: 26em;
+    }
+    
+    #agendaContainerDIV .agendaGroupDIV
+    {
+        margin: 0 0 0 -2em;
+        width: 28em;
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 18em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 26em;
+    }
+    
+    
+    .dateSelectDIV::after
+    {
+        top: -1.25em;
+        right: 0.5em;
+    }
+    
+    #addHospRoomFormDIV .availabilityDIV
+    {
+        width: 20em;
+    }
+    
+    .shortAgendaTime2,
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2,
+    .agendaExtendedDetail
+    {
+        font-size: 0.7em;
+    }
+    
+    .shortAgendaTime2
+    {
+        line-height: 1.6em;
+    }
+    
+    .agendaListDIV
+    {
+        margin: 0 4em;
+        width: 28.5em;
+    }
+
+    .shortAgendaTime2
+    {
+        width: 8em;
+    }
+
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2
+    {
+        width: 27em;
+    }
+    
+    .dateBlock
+    {
+        width: 3.2em;
+        height: 3.2em;
+        margin: 0 -4.1px;
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.3em;
+        height: 3.3em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(9, 1fr);
+        margin: 0;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1.6em;
+    }
+    
+    body
+    {
+        max-width: 48em;
+    }
+}
+
+@media (min-width: 72.1em)
+{
+    .dateBlock
+    {
+        margin: 0 -5px; 
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.3em;
+        height: 3.3em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0;
+    }
+    
+    #agendaContainerDIV .agendaGroupDIV
+    {
+        margin: 0 0 0 -3em;
+        width: 30.5em;
+    }
+    
+    .agendaExtendedDetail .agendaDetailItem
+    {
+        width: 29em;
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 20em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 28.5em;
+    }
+    
+    .shortAgendaTitle2,
+    .shortAgendaSubTitle2
+    {
+        width: 30em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 2.2em;
+    }
+    
+    body
+    {
+        max-width: 72em;
+    }
+}
+
+@media (min-width: 96.1em)
+{
+    .agendaExtendedDetail
+    {
+        margin: 0 0 0.5em 2em !important;
+    }
+/*    .agendaExtendedDetail div
+    {
+        margin: 0 2em 0.3em 0;
+    }
+    */
+    .dateBlock
+    {
+        margin: 0 -6px; 
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.5em;
+        height: 3.5em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(11, 1fr);
+    }
+
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2em;
+        font-size: 0.7em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 3.6em;
+        font-size: 0.5em;
+    }
+    
+    .agendaExtendedDetail .width2
+    {
+    width: 9em !important;
+    }
+    
+    #agendaContainerDIV .agendaGroupDIV
+    {
+        width: 36em;
+    }
+    
+    #agendaContainerDIV .agendaGroupDIV
+    {
+        width: 34em;
+    }
+    
+    .agendaExtendedDetail .agendaDetailItem
+    {
+        width: 34em;
+    }
+    
+        #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 27em;
+    }
+    
+    .shortAgendaTitle2, .shortAgendaSubTitle2
+    {
+        width: 34em;
+    }
+    
+    .agendaListDIV
+    {
+        width: 34em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 2.5em;
+    }
+    
+    body
+    {
+        max-width: 96em;
+    }
+}
+
+@media (max-height: 64em) and (min-width: 72em)
+{
+    .agendaListDIV
+    {
+        margin: 0 2em;
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.2em;
+        height: 3.2em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0;
+    }
+
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2em;
+        font-size: 0.7em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 3.6em;
+        font-size: 0.5em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 2em;
+    }
+    
+    body
+    {
+        max-width: 64em;
+    }
+}
+
+@media (max-height: 56em) and (min-width: 64em)
+{
+    .agendaListDIV
+    {
+        margin: 0 3.15em;
+    }
+    
+    #agendaContainerDIV .agendaGroupDIV
+    {
+        margin: unset;
+    }
+    
+    .shortAgendaTitle2, .shortAgendaSubTitle2
+    {
+        width: 27em;
+    }
+    
+    .dateBlock
+    {
+        margin: 0 -4px; 
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.5em;
+        height: 3.5em;
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 22em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 31em;
+    }
+    
+/*    input,
+    textarea,
+    select,
+    .datepicker,
+    .timeSelectDIV
+    {
+        width: 23em;
+    }*/
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1.6em;
+    }
+    
+    body
+    {
+        max-width: 56em;
+    }
+}
+
+@media (max-height: 48em) and (min-width: 56em)
+{
+    .agendaListDIV
+    {
+        margin: 0 6.75em;    
+    }
+    
+    .dateBlock
+    {
+        margin: 0 -3.3px; 
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.9em;
+        height: 3.9em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0;
+    }
+
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2.4em;
+        font-size: 0.7em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 4.2em;
+        font-size: 0.5em;
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 26em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 36em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 2.5em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1.2em;
+    }
+    
+    body
+    {
+        max-width: 48em;
+    }
+}
+
+
+@media (max-height: 36em) and (min-width: 48em)
+{
+    .dateBlock
+    {
+        margin: 0 -2.5px; 
+    }
+    
+    .hospRoomSegmentDIV
+    {
+        width: 4.5em;
+        height: 4.5em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(8, 1fr);
+        margin: 0;
+    }
+
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 24em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 32em;
+    }
+    
+    
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2.3em;
+        font-size: 0.8em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 4.2em;
+        font-size: 0.6em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 1em;
+    }
+    
+    body
+    {
+        max-width: 36em;
+    }
+}
+
+
+@media (max-height: 24em) and (min-width: 36em)
+{
+    .dateBlock
+    {
+        margin: 0 -2.3px; 
+    }
+    
+    #agendaContainerDIV .agendaItemColumn2
+    {
+        width: 18em;
+    }
+    
+    #agendaContainerDIV #insightsDIV
+    {
+        width: 26em;
+    }
+    
+    
+    
+    .hospRoomSegmentDIV
+    {
+        width: 3.7em;
+        height: 3.7em;
+    }
+    
+    .hospCalendarDIV
+    {
+        grid-template-columns: repeat(8, 1fr);
+        margin: 0;
+    }
+
+    .hospRoomSegmentStart,
+    .emptySegment div
+    {
+        top: 2.6em;
+        font-size: 0.6em;
+    }
+
+    .hospRoomSegmentAuthor
+    {
+        top: 3.7em;
+        font-size: 0.5em;
+    }
+    
+    .headerDIV,
+    .contentDIV,
+    .notePadDIV
+    {
+        font-size: 0.8em;
+    }
+    
+    body
+    {
+        max-width: 24em;
+    }
+}
+

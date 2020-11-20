@@ -1,0 +1,45 @@
+[
+    {
+        "name": "messagebird/php-rest-api",
+        "version": "v1.18.0",
+        "version_normalized": "1.18.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/messagebird/php-rest-api.git",
+            "reference": "aa76d2ca9bce647f9af1c58a07f81bcb5cadefdc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/messagebird/php-rest-api/zipball/aa76d2ca9bce647f9af1c58a07f81bcb5cadefdc",
+            "reference": "aa76d2ca9bce647f9af1c58a07f81bcb5cadefdc",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5"
+        },
+        "time": "2020-05-29T09:28:21+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MessageBird\\": "src/MessageBird/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "MessageBird",
+                "email": "info@messagebird.com"
+            }
+        ],
+        "description": "MessageBird REST API client for PHP",
+        "homepage": "https://github.com/messagebird/php-rest-api"
+    }
+]
